@@ -36,7 +36,7 @@ fun CoinListScreen(navController: NavController, viewModel:CoinListViewModel) {
 
     Scaffold(modifier = Modifier.fillMaxSize(),
         topBar ={
-            TopAppBar(title = { Text(text = "Cripper", fontFamily = FontFamily.Cursive) },
+            TopAppBar(title = { Text(text = "Cripper") },
                 colors = TopAppBarDefaults
                     .smallTopAppBarColors(containerColor = MaterialTheme
                         .colorScheme.surfaceColorAtElevation(4.dp)))
