@@ -1,6 +1,7 @@
 package com.example.cripper.presentation.presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -22,6 +23,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cripper.domain.model.Coin
+import com.example.cripper.presentation.presentation.theme.letta
 
 @Composable
 fun CoinListItem(
@@ -34,7 +36,8 @@ fun CoinListItem(
             .fillMaxWidth()
             .height(70.dp)
             .clickable { onItemClicked(coin) }
-            .background(color = MaterialTheme.colorScheme.surfaceColorAtElevation(8.dp))
+            .background(color = letta)
+            .border(color = Color.LightGray, width = 2.dp)
             .padding(10.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically) {
@@ -49,7 +52,6 @@ fun CoinListItem(
                 text = if (coin.isActive) "Active" else "Inactive",
                 modifier = Modifier.align(alignment = Alignment.CenterVertically),
                 color = Color.Red,
-                fontStyle = FontStyle.Italic,
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Bold
             )
