@@ -47,7 +47,7 @@ fun CoinListScreen(navController: NavController, viewModel:CoinListViewModel) {
         .padding(it)) {
        LazyColumn(modifier = Modifier.fillMaxSize(),
            contentPadding = PaddingValues(5.dp),
-           verticalArrangement = Arrangement.spacedBy(15.dp)){
+           verticalArrangement = Arrangement.spacedBy(10.dp)){
 
            items(state.coins){coin->
                CoinListItem(coin = coin) {coins->
