@@ -36,8 +36,7 @@ fun CoinListItem(
             .fillMaxWidth()
             .height(70.dp)
             .clickable { onItemClicked(coin) }
-            .background(color = letta)
-            .border(color = Color.LightGray, width = 2.dp)
+            .border(color = Color.Black, width = 1.dp)
             .padding(10.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically) {
@@ -64,8 +63,8 @@ fun CoinListItem(
 fun ListPrev () {
 
     CoinListItem(coin = Coin("10",
-        isActive = true,
+        isActive = false,
         name = "KaiCoin",
         rank = 9,
-        symbol = "K"), onItemClicked = {})
+        symbol = "KDB"), onItemClicked = {})
 }
